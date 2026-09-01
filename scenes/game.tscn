@@ -12,7 +12,7 @@ script = ExtResource("1_xkjqf")
 texture = ExtResource("1_187ey")
 
 [node name="Player" parent="." instance=ExtResource("2_vbq21")]
-position = Vector2(25, 31)
+position = Vector2(41, 46)
 scale = Vector2(6, 6)
 
 [node name="OjectScenery" parent="." instance=ExtResource("4_juq4b")]

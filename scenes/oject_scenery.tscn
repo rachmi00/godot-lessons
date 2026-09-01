@@ -1,23 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b12uncebh7gs7"]
+[gd_scene load_steps=2 format=3 uid="uid://b12uncebh7gs7"]
 
-[ext_resource type="Texture2D" uid="uid://d1h0ksxlju0ou" path="res://graphics/objects/house1.png" id="1_o6s1r"]
 [ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="2_47gia"]
-[ext_resource type="Texture2D" uid="uid://cxutqp0hti8vw" path="res://graphics/objects/bench.png" id="3_pse62"]
 
 [node name="OjectScenery" type="Node2D"]
-
-[node name="House1" type="Sprite2D" parent="."]
-position = Vector2(11, -18)
-texture = ExtResource("1_o6s1r")
-
-[node name="House2" type="Sprite2D" parent="House1"]
-position = Vector2(285, -5)
-texture = ExtResource("1_o6s1r")
 
 [node name="tree" type="Sprite2D" parent="."]
 position = Vector2(54, -217)
 texture = ExtResource("2_47gia")
-
-[node name="Bench" type="Sprite2D" parent="."]
-position = Vector2(124, 105)
-texture = ExtResource("3_pse62")
