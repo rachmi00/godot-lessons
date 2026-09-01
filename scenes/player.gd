@@ -12,4 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("right"):
-		position += direction * speed
+		direction = Vector2.RIGHT
+	if Input.is_action_pressed("left"):
+		direction = Vector2.LEFT	
+	position += direction * speed
