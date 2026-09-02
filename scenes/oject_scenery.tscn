@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b12uncebh7gs7"]
-
-[ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="2_47gia"]
-
-[node name="OjectScenery" type="Node2D"]
-
-[node name="tree" type="Sprite2D" parent="."]
-position = Vector2(54, -217)
-texture = ExtResource("2_47gia")
