@@ -1,11 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://c31vyhmh0bwkf"]
+[gd_scene load_steps=8 format=3 uid="uid://c31vyhmh0bwkf"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_ab2rv"]
+[ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_b6315"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02gfg"]
 size = Vector2(12, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv3o0"]
+atlas = ExtResource("2_b6315")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj00l"]
+atlas = ExtResource("2_b6315")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x33xk"]
+atlas = ExtResource("2_b6315")
+region = Rect2(0, 32, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_b73oo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv3o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj00l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv3o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x33xk")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ab2rv")
@@ -24,6 +55,10 @@ shape = SubResource("RectangleShape2D_02gfg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b73oo")
+animation = &"left"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b73oo")
+animation = &"left"
+autoplay = "left"
+frame_progress = 0.977317
