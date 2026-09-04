@@ -16,9 +16,14 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
+	animation()
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("space"):
 		print("something")
 		
-		
+func animation():
+	if direction:
+		pass
+	else:
+		$AnimatedSprite2D2.frame = 0
