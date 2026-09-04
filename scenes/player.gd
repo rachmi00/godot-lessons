@@ -24,6 +24,13 @@ func _physics_process(_delta: float) -> void:
 		
 func animation():
 	if direction:
+		#if direction.x > 0:
+			#$AnimatedSprite2D2.flip_h = true
+		#else:
+			#$AnimatedSprite2D2.flip_h = false	
+	#Instead of using the code above we can refactor it to the one below
+		$AnimatedSprite2D2.flip_h = direction.x > 0
+			
 		pass
 	else:
 		$AnimatedSprite2D2.frame = 0

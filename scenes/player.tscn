@@ -63,4 +63,3 @@ frame_progress = 0.978012
 sprite_frames = SubResource("SpriteFrames_b73oo")
 animation = &"left"
 autoplay = "left"
-frame_progress = 0.966066
