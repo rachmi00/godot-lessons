@@ -1,10 +1,22 @@
-[gd_scene load_steps=8 format=3 uid="uid://c31vyhmh0bwkf"]
+[gd_scene load_steps=14 format=3 uid="uid://c31vyhmh0bwkf"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_ab2rv"]
 [ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_b6315"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02gfg"]
 size = Vector2(12, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni2pb"]
+atlas = ExtResource("2_b6315")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4a20"]
+atlas = ExtResource("2_b6315")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg1wm"]
+atlas = ExtResource("2_b6315")
+region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uv3o0"]
 atlas = ExtResource("2_b6315")
@@ -18,8 +30,37 @@ region = Rect2(0, 16, 16, 16)
 atlas = ExtResource("2_b6315")
 region = Rect2(0, 32, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u8ke"]
+atlas = ExtResource("2_b6315")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jpe2"]
+atlas = ExtResource("2_b6315")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buxke"]
+atlas = ExtResource("2_b6315")
+region = Rect2(32, 32, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_b73oo"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni2pb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4a20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni2pb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg1wm")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uv3o0")
@@ -35,6 +76,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u8ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jpe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u8ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buxke")
+}],
+"loop": true,
+"name": &"up",
 "speed": 5.0
 }]
 
@@ -61,5 +119,6 @@ frame_progress = 0.978012
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b73oo")
-animation = &"left"
+animation = &"up"
 autoplay = "left"
+frame_progress = 0.94269

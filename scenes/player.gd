@@ -30,7 +30,10 @@ func animation():
 			#$AnimatedSprite2D2.flip_h = false	
 	#Instead of using the code above we can refactor it to the one below
 		$AnimatedSprite2D2.flip_h = direction.x > 0
-			
+		if direction.x != 0:
+			$AnimatedSprite2D2.animation = 'left'
+		else:
+			$AnimatedSprite2D2.animation = 'up' if direction.y < 0 else 'down'
 		pass
 	else:
 		$AnimatedSprite2D2.frame = 0
