@@ -48,3 +48,5 @@ shape = SubResource("RectangleShape2D_qcxjh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
 position = Vector2(-4, -338)
 shape = SubResource("RectangleShape2D_qcxjh")
+
+[node name="Timer" type="Timer" parent="."]
