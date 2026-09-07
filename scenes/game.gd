@@ -12,9 +12,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	pass
 
-
-func _on_timer_timeout() -> void:
-	print("Is this for real")
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
