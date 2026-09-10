@@ -20,12 +20,6 @@ script = ExtResource("1_xkjqf")
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_187ey")
 
-[node name="Player" parent="." instance=ExtResource("2_vbq21")]
-position = Vector2(41, 46)
-
-[node name="Tree" parent="." instance=ExtResource("4_juq4b")]
-position = Vector2(-158, 66)
-
 [node name="Borders" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
@@ -62,6 +56,14 @@ shape = SubResource("RectangleShape2D_0hf3o")
 
 [node name="CarTimer" type="Timer" parent="Timer"]
 autostart = true
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Player" parent="Objects" instance=ExtResource("2_vbq21")]
+position = Vector2(41, 46)
+
+[node name="Tree" parent="Objects" instance=ExtResource("4_juq4b")]
+position = Vector2(-158, 66)
 
 [connection signal="body_entered" from="Borders/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
