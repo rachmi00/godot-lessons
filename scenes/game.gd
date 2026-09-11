@@ -21,6 +21,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_car_timer_timeout() -> void:
 	var car = car_scene.instantiate() as Area2D
-	$Objects.add_child(car)
 	var pos_marker = $CarStartPositions.get_children().pick_random()
 	car.position = pos_marker.position
+	$Objects.add_child(car)
