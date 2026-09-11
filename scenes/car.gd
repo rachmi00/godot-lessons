@@ -6,6 +6,7 @@ var speed = 2
 func _ready() -> void:
 	if position.x < 0:
 		direction.x = 1
+		$Sprite2D.flip_h = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	position += direction * speed
