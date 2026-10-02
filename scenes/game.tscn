@@ -24,6 +24,7 @@ texture = ExtResource("1_187ey")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
 collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
 position = Vector2(-202, 1)
@@ -31,6 +32,7 @@ shape = SubResource("RectangleShape2D_kr50m")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
 collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
 position = Vector2(203, 12)
@@ -38,6 +40,7 @@ shape = SubResource("RectangleShape2D_kr50m")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
 collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
 position = Vector2(-3, 337)
@@ -45,15 +48,17 @@ shape = SubResource("RectangleShape2D_qcxjh")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
 collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
 position = Vector2(-4, -338)
 shape = SubResource("RectangleShape2D_qcxjh")
 
-[node name="Area2D" type="Area2D" parent="Borders"]
-collision_layer = 8
+[node name="FinishArea2D" type="Area2D" parent="Borders"]
+collision_layer = 0
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/FinishArea2D"]
 position = Vector2(-2, -158.5)
 shape = SubResource("RectangleShape2D_0hf3o")
 
@@ -99,5 +104,5 @@ position = Vector2(202, 92)
 [node name="Marker2D9" type="Marker2D" parent="CarStartPositions"]
 position = Vector2(202, -104)
 
-[connection signal="body_entered" from="Borders/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Borders/FinishArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
