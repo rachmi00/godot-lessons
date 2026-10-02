@@ -68,6 +68,7 @@ shape = SubResource("RectangleShape2D_0hf3o")
 autostart = true
 
 [node name="Objects" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Player" parent="Objects" instance=ExtResource("2_vbq21")]
 position = Vector2(41, 46)
