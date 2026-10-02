@@ -28,4 +28,5 @@ func _on_car_timer_timeout() -> void:
 	
 	
 func go_to_title(body):
+	print(body)
 	print('Player car collision')

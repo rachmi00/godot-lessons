@@ -23,30 +23,35 @@ texture = ExtResource("1_187ey")
 [node name="Borders" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Borders"]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D"]
 position = Vector2(-202, 1)
 shape = SubResource("RectangleShape2D_kr50m")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Borders"]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2"]
 position = Vector2(203, 12)
 shape = SubResource("RectangleShape2D_kr50m")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Borders"]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3"]
 position = Vector2(-3, 337)
 shape = SubResource("RectangleShape2D_qcxjh")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Borders"]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D4"]
 position = Vector2(-4, -338)
 shape = SubResource("RectangleShape2D_qcxjh")
 
 [node name="Area2D" type="Area2D" parent="Borders"]
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/Area2D"]
 position = Vector2(-2, -158.5)
